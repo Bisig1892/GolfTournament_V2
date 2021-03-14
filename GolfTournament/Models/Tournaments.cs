@@ -13,10 +13,12 @@ namespace GolfTournament.Models
         /// <summary>
         /// Id of the course being played
         /// </summary>
+        [Required]
         public Courses Course { get; set; }
         ///// <summary>
         ///// Date the tournament is being played 
         ///// </summary>
+        [Required]
         public DateTime ScheduledDate { get; set; }
         /// <summary>
         /// flights are the number of leaderboards the main tournament will be broken down into

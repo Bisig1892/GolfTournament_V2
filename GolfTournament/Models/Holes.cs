@@ -13,11 +13,15 @@ namespace GolfTournament.Models
         /// <summary>
         /// number of hole on the golf course
         /// </summary>
+        [Required]
         public int Number { get; set; }
+        [Required]
         public int Par { get; set; }
         /// <summary>
         /// Difficulty of hole on the course. hardest = 1, easiest = 18
+        /// Handicaps will be used to determine tiebreakers
         /// </summary>
+        [Required]
         public int Handicap { get; set; }
 
         public Courses Course { get; set; }

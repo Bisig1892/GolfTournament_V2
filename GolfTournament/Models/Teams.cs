@@ -13,10 +13,12 @@ namespace GolfTournament.Models
         /// <summary>
         /// id of the tournament the team is playing in
         /// </summary>
+        [Required]
         public Tournaments Tournament { get; set; }
         /// <summary>
         /// Name of the team
         /// </summary>
+        [Required]
         public string Name { get; set; }
         /// <summary>
         /// calculated average age of the team members used to see if team qualifies for senior flight

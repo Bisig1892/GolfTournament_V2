@@ -13,14 +13,20 @@ namespace GolfTournament.Models
         /// <summary>
         /// Name of the course
         /// </summary>
+        [Required]
         public string Name { get; set; }
         /// <summary>
         /// Total Par for whole course
         /// </summary>
+        [Required]
         public int Par { get; set; }
+        [Required]
         public string StreetAddress { get; set; }
+        [Required]
         public string City { get; set; }
+        [Required]
         public string State { get; set; }
+        [Required]
         public int ZIP { get; set; }
 
         public List<Holes> Holes { get; set; }

@@ -23,6 +23,6 @@ namespace GolfTournament.Models
         public string State { get; set; }
         public int ZIP { get; set; }
 
-        //public List<Holes> Holes { get; set; }
+        public List<Holes> Holes { get; set; }
     }
 }

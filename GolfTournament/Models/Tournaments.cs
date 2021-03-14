@@ -21,6 +21,6 @@ namespace GolfTournament.Models
         /// <summary>
         /// flights are the number of leaderboards the main tournament will be broken down into
         /// </summary>
-        public int flights { get; set; }
+        public int Flights { get; set; }
     }
 }

@@ -25,6 +25,6 @@ namespace GolfTournament.Models
         /// <summary>
         /// This is the total score for the tournament. 
         /// </summary>
-        public int TotalScore { get; set; }
+        public int TotalScore { get; set; } 
     }
 }

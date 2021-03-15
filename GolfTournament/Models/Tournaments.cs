@@ -11,6 +11,11 @@ namespace GolfTournament.Models
         [Key]
         public int TournamentId { get; set; }
         /// <summary>
+        /// The name of the tournament taking place.
+        /// </summary>
+        [Required]
+        public string Name { get; set; }
+        /// <summary>
         /// Id of the course being played
         /// </summary>
         [Required]

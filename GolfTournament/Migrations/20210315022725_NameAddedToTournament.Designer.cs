@@ -4,14 +4,16 @@ using GolfTournament.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace GolfTournament.Migrations
 {
     [DbContext(typeof(TournamentContext))]
-    partial class TournamentContextModelSnapshot : ModelSnapshot
+    [Migration("20210315022725_NameAddedToTournament")]
+    partial class NameAddedToTournament
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

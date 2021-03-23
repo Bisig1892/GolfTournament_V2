@@ -10,11 +10,11 @@ using GolfTournament.Models;
 
 namespace GolfTournament.Controllers
 {
-    public class IndividualCompetionsController : Controller
+    public class IndividualCompetitionsController : Controller
     {
         private readonly TournamentContext _context;
 
-        public IndividualCompetionsController(TournamentContext context)
+        public IndividualCompetitionsController(TournamentContext context)
         {
             _context = context;
         }

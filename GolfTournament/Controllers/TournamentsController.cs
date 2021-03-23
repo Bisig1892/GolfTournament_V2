@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using GolfTournament.Data;
 using GolfTournament.Models;
+using GolfTournament.ViewModels;
 
 namespace GolfTournament.Controllers
 {
@@ -44,7 +45,7 @@ namespace GolfTournament.Controllers
         }
 
         // GET: Tournaments/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             return View();
         }
@@ -54,7 +55,7 @@ namespace GolfTournament.Controllers
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("TournamentId,Name,ScheduledDate,Flights")] Tournaments tournaments)
+        public async Task<IActionResult> Create([Bind("TournamentId,Name,ScheduledDate,Course,Flights")] Tournaments tournaments)
         {
             if (ModelState.IsValid)
             {

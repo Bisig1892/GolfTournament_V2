@@ -23,8 +23,13 @@
                 <span asp-validation-for="ScheduledDate" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Course.Name" class="control-label"></label>
+                <input asp-for="Course.Name" class="form-control" />
+                <span asp-validation-for="Course.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Flights" class="control-label"></label>
-                <input asp-for="Flights" class="form-control" />
+                <input asp-for="Flights" value="1" class="form-control" />
                 <span asp-validation-for="Flights" class="text-danger"></span>
             </div>
             <div class="form-group">

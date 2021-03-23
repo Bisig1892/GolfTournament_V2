@@ -24,6 +24,7 @@ namespace GolfTournament.Models
         [Required]
         public int Handicap { get; set; }
 
-        public Courses Course { get; set; }
+        public int CourseId { get; set; }
+        public virtual Courses Course { get; set; }
     }
 }

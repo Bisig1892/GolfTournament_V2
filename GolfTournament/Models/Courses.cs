@@ -28,7 +28,5 @@ namespace GolfTournament.Models
         public string State { get; set; }
         [Required]
         public int ZIP { get; set; }
-
-        public List<Holes> Holes { get; set; }
     }
 }

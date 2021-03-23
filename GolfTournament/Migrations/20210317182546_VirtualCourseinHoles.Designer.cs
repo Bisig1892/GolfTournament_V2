@@ -10,14 +10,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GolfTournament.Migrations
 {
     [DbContext(typeof(TournamentContext))]
-    [Migration("20210315022725_NameAddedToTournament")]
-    partial class NameAddedToTournament
+    [Migration("20210317182546_VirtualCourseinHoles")]
+    partial class VirtualCourseinHoles
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.10")
+                .HasAnnotation("ProductVersion", "3.1.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -62,7 +62,7 @@ namespace GolfTournament.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int?>("CourseId")
+                    b.Property<int>("CourseId")
                         .HasColumnType("int");
 
                     b.Property<int>("Handicap")
@@ -436,8 +436,10 @@ namespace GolfTournament.Migrations
             modelBuilder.Entity("GolfTournament.Models.Holes", b =>
                 {
                     b.HasOne("GolfTournament.Models.Courses", "Course")
-                        .WithMany("Holes")
-                        .HasForeignKey("CourseId");
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("GolfTournament.Models.Players", b =>
